@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Modal oynani ochish</button>
+    <div id="modal" class="modal">
+        <div class="box-wrapper">
+            <button id="btnclose">&#x2716;</button><br>
+            <h2>Saytimizga Hush kelibsiz!</h2>
+            <div class="input-wrapper">
+                <label for="First Name">First Name:   </label>
+                <input type="text" id="first-name" required name="First Name"><br>
+                       
+                <label for="Last Name">Last Name: </label>
+                <input type="text" id="last-name" required name="Last Name"><br>
+
+                <label for="Phone">Phone: </label>
+                <input type="number" id="Phone" required name="Phone"><br>
+            </div>
+            <div class="thank">
+                <img src="img/tenor.gif" alt="">
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let modal = document.querySelector('#modal')
+        btn.onclick = () => {
+            modal.classList.remove('modal-block')
+            modal.classList.add('modal')
+        }
+
+        btnclose.onclick = () => {
+            modal.classList.remove('modal')
+            modal.classList.add('modal-block')
+        }
+    </script>
+</body>
+</html>
